@@ -78,7 +78,7 @@ public class 随机快排 {
 
 
     public static void main(String[] args) {
-        int[] aa ={1,6,4,3};
+        int[] aa ={1,6,4,3,2,2,1,4};
         quickSort(aa);
         System.out.println(JSON.toJSONString(aa));
     }
