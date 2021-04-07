@@ -2,6 +2,9 @@ package com.pander.paixu;
 
 import com.alibaba.fastjson.JSON;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
 /**
  * @author: sunxuefei10
  * @date: 2021/3/16  4:00 下午
@@ -50,7 +53,10 @@ public class 归并排序 {
 
 
     public static void main(String[] args) {
-        int[] aa ={1,6,4,3};
-        sort(aa,0,3);
+//        int[] aa ={1,6,4,3};
+//        sort(aa,0,3);
+
+        System.out.println(LocalDate.now().plus(30, ChronoUnit.DAYS).atStartOfDay());
+
     }
 }

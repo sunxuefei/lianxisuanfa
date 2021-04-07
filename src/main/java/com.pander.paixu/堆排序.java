@@ -23,15 +23,12 @@ public class 堆排序 {
         if(arr == null || arr.length<2){
             return;
         }
-
         /**
          * 从数组的最后一个元素排序，每次都是从头元素不断地进行比较大小构建树
          */
         for(int i = arr.length-1;i>=0;i--){
             heapify(arr,i,arr.length);
         }
-
-
         //前一步构建完树，然后需要比较大小，比较大小的基本思路就是取出大根堆的根节点然后进行堆重排，再取根节点再重拍，每次都将最大值取出来完成排序。
         int heapSize = arr.length;
         swap(arr,0,--heapSize);
