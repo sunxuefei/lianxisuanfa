@@ -53,10 +53,10 @@ public class 归并排序 {
 
 
     public static void main(String[] args) {
-//        int[] aa ={1,6,4,3};
-//        sort(aa,0,3);
+        int[] aa ={1,6,4,3,7,8};
+        sort(aa,0,3);
 
-        System.out.println(LocalDate.now().plus(30, ChronoUnit.DAYS).atStartOfDay());
+//        System.out.println(LocalDate.now().plus(30, ChronoUnit.DAYS).atStartOfDay());
 
     }
 }
