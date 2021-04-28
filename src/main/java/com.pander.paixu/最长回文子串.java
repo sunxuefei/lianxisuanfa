@@ -7,39 +7,28 @@ package com.pander.paixu;
 public class 最长回文子串 {
 
 
-    public String process(String str){
-        int len = str.length();
-        if(len <2){
-            return str;
-        }
-        int maxLen =1;
-        String res = str.substring(0,1);
-        for(int i = 0;i<len-1;i++){
-            String oldStr = centerSpread(str,i,i);
-            String evenStr = centerSpread(str,i,i+1);
-            String maxLenStr=oldStr.length()>evenStr.length()?oldStr:evenStr;
-            if(maxLenStr.length()>maxLen){
-                maxLen=maxLenStr.length();
-                res=maxLenStr;
+    public String longestPalindrome(String s) {
+        if (s == null || s.length() < 1) return "";
+        int start = 0, end = 0;
+        for (int i = 0; i < s.length(); i++) {
+            int len1 = expandAroundCenter(s, i, i);
+            int len2 = expandAroundCenter(s, i, i + 1);
+            int len = Math.max(len1, len2);
+            if (len > end - start) {
+                start = i - (len - 1) / 2;
+                end = i + len / 2;
             }
         }
-        return res;
+        return s.substring(start, end + 1);
     }
 
-
-    private String centerSpread(String str,int left,int right){
-        int len = str.length();
-        int i=left;
-        int j = right;
-        while(i>=0 && j<len){
-            if(str.charAt(i)== str.charAt(j)){
-                i--;
-                j++;
-            }else{
-                break;
-            }
+    private int expandAroundCenter(String s, int left, int right) {
+        int L = left, R = right;
+        while (L >= 0 && R < s.length() && s.charAt(L) == s.charAt(R)) {
+            L--;
+            R++;
         }
-        return str.substring(i+1,j);
+        return R - L - 1;
     }
 
 
