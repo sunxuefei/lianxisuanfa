@@ -77,6 +77,9 @@ public class 二叉树路径总和记录打印 {
           return  l;
       }
 
+        public static void main(String[] args) {
+            System.out.println(Integer.MIN_VALUE);
+        }
 
 
 

@@ -35,4 +35,13 @@ public class 括号序列 {
         }
         return stack.empty();
     }
+
+
+    public static void main(String[] args) {
+        try {
+            Thread.sleep(10000000000000l);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }

@@ -26,6 +26,15 @@
         <artifactId>fastjson</artifactId>
         <version>1.2.70</version>
     </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.openjdk.jol/jol-core -->
+        <dependency>
+            <groupId>org.openjdk.jol</groupId>
+            <artifactId>jol-core</artifactId>
+            <version>0.15</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     

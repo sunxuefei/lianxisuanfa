@@ -41,6 +41,7 @@ public class 每K个元素翻转 {
 
         for(int i=0;i<length/k;i++){
             for(int j =1;j<k;j++){
+                //temp=2
                 temp = cur.next;
                 //1->3
                 cur.next = temp.next;
@@ -50,7 +51,7 @@ public class 每K个元素翻转 {
                 pre.next = temp;
                 //最后第一次执行完成之后变成head->2->1->3
             }
-        pre = cur;
+            pre = cur;
             cur=cur.next;
 
         }
