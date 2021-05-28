@@ -32,4 +32,10 @@ public class 二分查找 {
 
     }
 
+    public static void main(String[] args) {
+        System.out.println(1>>>1);
+        System.out.println(1<<1);
+        System.out.println(1>>1);
+    }
+
 }
